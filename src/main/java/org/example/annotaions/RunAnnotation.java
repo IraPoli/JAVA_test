@@ -1,5 +1,6 @@
 package org.example.annotaions;
 
+import org.example.exceptions.ImproperAgeValueException;
 import org.example.exceptions.Person;
 import org.example.exceptions.PersonaList;
 
@@ -10,7 +11,7 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 
 public class RunAnnotation {
-    public static void start() throws InvocationTargetException, IllegalAccessException {
+    public static void start() throws InvocationTargetException, IllegalAccessException, ImproperAgeValueException {
 
         Person myPerson = new Person(33, "Oleg");
 
