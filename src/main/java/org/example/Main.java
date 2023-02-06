@@ -5,6 +5,7 @@ import org.example.exceptions.ImproperAgeValueException;
 import org.example.exceptions.Person;
 import org.example.exceptions.PersonaList;
 import org.example.exceptions.RunException;
+import org.example.reflaction.TryReflection;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -41,7 +42,7 @@ class Main {
     static short val8;
 
     static byte val9;
-    public static void main(String[] args) throws ImproperAgeValueException, InvocationTargetException, IllegalAccessException {
+    public static void main(String[] args) throws ImproperAgeValueException, InvocationTargetException, IllegalAccessException, NoSuchMethodException, InstantiationException {
      /*   AnonymousDemo an = new AnonymousDemo();
         an.createClass();
 
@@ -98,17 +99,21 @@ class Main {
         */
 
         //
-/*
-        TryReflection tryReflection = new TryReflection();
-        tryReflection.test();
 
 
 
- */
 
 
-       // RunException.run();
-        RunAnnotation.start();
+     //   TryReflection tryReflection = new TryReflection();
+     //   tryReflection.test();
+
+
+
+
+
+
+        RunException.run();
+      //  RunAnnotation.start();
 
     }
     public static class mySupplier<Integer> implements Supplier<java.lang.Integer> {

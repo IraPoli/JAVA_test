@@ -1,7 +1,9 @@
 package org.example.exceptions;
 
+
 public class RunException {
-    public static void run(){
+  //  @SuppressWarnings("all")
+    public static void run() throws ImproperAgeValueException {
 
         //throws
         Person simon = new Person(-5, "Mike");
