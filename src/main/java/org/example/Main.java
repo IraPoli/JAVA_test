@@ -5,6 +5,8 @@ import org.example.exceptions.ImproperAgeValueException;
 import org.example.exceptions.Person;
 import org.example.exceptions.PersonaList;
 import org.example.exceptions.RunException;
+import org.example.gc.GCRun;
+import org.example.putterns.creational.builder.Demo;
 import org.example.reflaction.TryReflection;
 
 import java.lang.reflect.InvocationTargetException;
@@ -43,77 +45,12 @@ class Main {
 
     static byte val9;
     public static void main(String[] args) throws ImproperAgeValueException, InvocationTargetException, IllegalAccessException, NoSuchMethodException, InstantiationException {
-     /*   AnonymousDemo an = new AnonymousDemo();
-        an.createClass();
+     //   RunException.run();
+     //   RunAnnotation.start();
 
+       // GCRun.run();
 
-        System.out.println("val1 boolean =   "+ val1);
-        System.out.println("val2  double=   "+ val2);
-        System.out.println("val3 float =   "+ val3);
-        System.out.println("val4 int =   "+ val4);
-        System.out.println("val5  long =   "+ val5);
-        System.out.println("val6 String =   "+ val6);
-        System.out.println("val7 char =   "+ val7);
-        System.out.println("val8 short =   "+ val8);
-        System.out.println("val9 byte =   "+ val9);
-
-
-
-        int [] arr ={5,6,7,4};
-        int n = 0;
-        for (int i: arr) {
-        System.out.println(i + " " + n++);
-        }
-        System.out.println(rev("Hello!"));
-        System.out.println(ex1("Hello!"));
-        System.out.println(ex2("Hello!"));
-
-*/
-        Arrays Arry;
-        List l = Arrays.asList(3,6,81,4,6,8);
-
-        MyGeneric.OddPredicate o = new MyGeneric.OddPredicate();
-        Object ob = new Object();
-
-
-        System.out.println(MyGeneric.numberOfElements(l, o));
-
-
-        mySupplier<Integer> f = new mySupplier<Integer>();
-
-                MyGeneric.AddTenEl<Integer> addTenEl = new MyGeneric.AddTenEl<>(f);
-        System.out.println(addTenEl);
-
-
-
-
-        //------------------
-        /*
-        HashMap myMap= new HashMap();
-        ArrayList nList = new ArrayList();
-        List ll  =new LinkedList<Integer>();
-        //-----------
-        HashSet hs =new HashSet<>();
-
-        TreeMap tm = new TreeMap();
-        */
-
-        //
-
-
-
-
-
-     //   TryReflection tryReflection = new TryReflection();
-     //   tryReflection.test();
-
-
-
-
-
-
-        RunException.run();
-      //  RunAnnotation.start();
+        Demo.run();
 
     }
     public static class mySupplier<Integer> implements Supplier<java.lang.Integer> {
