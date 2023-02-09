@@ -6,6 +6,9 @@ import org.example.exceptions.Person;
 import org.example.exceptions.PersonaList;
 import org.example.exceptions.RunException;
 import org.example.gc.GCRun;
+import org.example.java8.consumer.DateTime;
+import org.example.java8.consumer.DemoConsumer;
+import org.example.java8.consumer.Printer;
 import org.example.putterns.creational.builder.Demo;
 import org.example.reflaction.TryReflection;
 
@@ -52,6 +55,13 @@ class Main {
 
         Demo.run();
 
+        DemoConsumer.run();
+        System.out.println("Data-------------");
+        DateTime.run();
+
+        System.out.println("Printer-------------");
+        Printer printer = new Printer();
+        printer.run();
     }
     public static class mySupplier<Integer> implements Supplier<java.lang.Integer> {
 
