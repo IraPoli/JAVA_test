@@ -21,7 +21,7 @@ public class Person {
     String name;
     int phoneNumber;
 
-    static int i, j;
+   /* static int i, j;
     static {
         System.out.println("In the static block");
         try {
@@ -39,7 +39,7 @@ public class Person {
             }
             // throw new RuntimeException(e.getMessage());
         }
-    }
+    }*/
 
 
     //throw exception
