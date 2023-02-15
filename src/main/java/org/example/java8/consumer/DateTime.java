@@ -24,5 +24,10 @@ public class DateTime {
         LocalDateTime dtMy = LocalDateTime.now();
         System.out.println("Ukraine Time" + dtMy);
 
+   //     Period
+
+   //             Duration
+        //date time formator
+
     }
 }
