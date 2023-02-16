@@ -5,6 +5,9 @@ import org.example.java8.streams.Streams;
 import org.example.putterns.behavioral.iterator.simpleIterator.IteratorRun;
 import org.example.putterns.creational.abstructFactory.RunAbstractFactory;
 import org.example.putterns.creational.factoryMathod.FactoryMethod;
+import org.example.putterns.creational.singelton.RunSingleton;
+import org.example.putterns.structural.decorator.RunDecorator;
+import org.example.putterns.structural.facade.FacadeRun;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -50,6 +53,9 @@ class Main {
         //   RunAbstractFactory.demo();
         FactoryMethod.runFactoryMethod();
         IteratorRun.run();
+        RunSingleton.run();
+        RunDecorator.run();
+        FacadeRun.run();
 
       /*  Demo.run();
 
