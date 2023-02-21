@@ -1,10 +1,7 @@
 package org.example;
 
 import org.example.exceptions.ImproperAgeValueException;
-import org.example.java8.streams.Streams;
-import org.example.putterns.behavioral.iterator.simpleIterator.IteratorRun;
-import org.example.putterns.creational.abstructFactory.RunAbstractFactory;
-import org.example.putterns.creational.factoryMathod.FactoryMethod;
+import org.example.patterns.structural.adaptor.RunAdapter;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -48,12 +45,16 @@ class Main {
        // GCRun.run();
       //  Streams.run();
         //   RunAbstractFactory.demo();
-        FactoryMethod.runFactoryMethod();
+   /*     FactoryMethod.runFactoryMethod();
         IteratorRun.run();
-
+        RunSingleton.run();
+        RunDecorator.run();
+        FacadeRun.run();
+*/
       /*  Demo.run();
 
         DemoConsumer.run();
+
         System.out.println("Data-------------");
         DateTime.run();
 
@@ -62,6 +63,10 @@ class Main {
         printer.run();
 
        */
+
+       //RunStatePattern.run();
+       // StrategyRun.run();
+        RunAdapter.run();
     }
     public static class mySupplier<Integer> implements Supplier<java.lang.Integer> {
 
