@@ -1,7 +1,16 @@
 package org.example;
 
 import org.example.exceptions.ImproperAgeValueException;
+import org.example.patterns.behavioral.iterator.IteratorRun;
+import org.example.patterns.behavioral.state.RunStatePattern;
+import org.example.patterns.behavioral.strategy.StrategyRun;
+import org.example.patterns.creational.abstructFactory.RunAbstractFactory;
+import org.example.patterns.creational.builder.BuilderRun;
+import org.example.patterns.creational.factoryMathod.FactoryMethod;
+import org.example.patterns.creational.singelton.RunSingleton;
 import org.example.patterns.structural.adaptor.RunAdapter;
+import org.example.patterns.structural.decorator.RunDecorator;
+import org.example.patterns.structural.facade.FacadeRun;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -44,14 +53,9 @@ class Main {
 
        // GCRun.run();
       //  Streams.run();
-        //   RunAbstractFactory.demo();
-   /*     FactoryMethod.runFactoryMethod();
-        IteratorRun.run();
-        RunSingleton.run();
-        RunDecorator.run();
-        FacadeRun.run();
-*/
-      /*  Demo.run();
+
+
+      /*
 
         DemoConsumer.run();
 
@@ -64,9 +68,19 @@ class Main {
 
        */
 
-       //RunStatePattern.run();
-       // StrategyRun.run();
+        IteratorRun.run();
+        RunStatePattern.run();
+        StrategyRun.run();
+
+        RunAbstractFactory.demo();
+        BuilderRun.run();
+        FactoryMethod.runFactoryMethod();
+        RunSingleton.run();
+
         RunAdapter.run();
+        RunDecorator.run();
+        FacadeRun.run();
+
     }
     public static class mySupplier<Integer> implements Supplier<java.lang.Integer> {
 
