@@ -6,7 +6,7 @@ import org.example.patterns.creational.builder.decore.Director;
 import org.example.patterns.creational.builder.builder.House;
 
 
-public class Demo {
+public class BuilderRun {
     //separate constructor
     public static void run() {
         Director director = new Director();

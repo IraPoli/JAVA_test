@@ -1,7 +1,8 @@
 package org.example;
 
+import org.example.codingTasks.NumbersTask;
+import org.example.codingTasks.StringTask;
 import org.example.exceptions.ImproperAgeValueException;
-import org.example.patterns.structural.adaptor.RunAdapter;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -16,7 +17,6 @@ class Polygon {
 
 class AnonymousDemo {
     public void createClass() {
-
         // creation of anonymous class extending class Polygon
         Polygon p1 = new Polygon() {
             public void display() {
@@ -38,20 +38,15 @@ class Main {
     static short val8;
 
     static byte val9;
-    public static void main(String[] args) throws ImproperAgeValueException, InvocationTargetException, IllegalAccessException, NoSuchMethodException, InstantiationException {
+    public static void main(String[] args) {
      //   RunException.run();
      //   RunAnnotation.start();
 
        // GCRun.run();
       //  Streams.run();
-        //   RunAbstractFactory.demo();
-   /*     FactoryMethod.runFactoryMethod();
-        IteratorRun.run();
-        RunSingleton.run();
-        RunDecorator.run();
-        FacadeRun.run();
-*/
-      /*  Demo.run();
+
+
+      /*
 
         DemoConsumer.run();
 
@@ -64,10 +59,35 @@ class Main {
 
        */
 
-       //RunStatePattern.run();
-       // StrategyRun.run();
+      /* Patterns
+      IteratorRun.run();
+        RunStatePattern.run();
+        StrategyRun.run();
+
+        RunAbstractFactory.demo();
+        BuilderRun.run();
+        FactoryMethod.runFactoryMethod();
+        RunSingleton.run();
+
         RunAdapter.run();
+        RunDecorator.run();
+        FacadeRun.run();
+
+
+       */
+        //coding tasks\
+        System.out.println(StringTask.reverseString("Test"));
+        NumbersTask.swapTwoNumbers();
+        System.out.println(StringTask.isVowelPresent("DtA"));
+        System.out.println(NumbersTask.isPrime(19));
+
+        System.out.println("fibonacci");
+        NumbersTask.printFibonacci(10);
+        List<Integer> list =  Arrays.asList(2, 5, 7, 5, 3);
+        System.out.println("Array contains only odd"+ NumbersTask.listContainsOnlyOdd(list));
+
     }
+
     public static class mySupplier<Integer> implements Supplier<java.lang.Integer> {
 
         @Override
@@ -78,36 +98,6 @@ class Main {
             return min + (int)(Math.random() * ((max - min) + 1));
         }
     }
-
-
-    public static String ex1(String str){
-        StringBuilder newStr = new StringBuilder("");
-        for(int i=0; i < str.length(); i++){
-                    if (str.substring(i+1,str.length()).indexOf(str.charAt(i))>=0
-                            ){
-                        newStr.append(str.charAt(i));
-                    };
-
-        }
-        return newStr.toString();
-    }
-    public static String ex2(String str){
-        Set<Character> set = new HashSet<>();
-        for(int i=0; i < str.length(); i++){
-            if (str.substring(i+1,str.length()).indexOf(str.charAt(i))>=0
-            ) {
-                set.add(str.charAt(i));
-            }
-        }
-        return set.toString();
-    }
-
- public static String rev(String str){
-        StringBuilder strB = new StringBuilder("");
-        for (int i=str.length()-1; i>=0;i--) strB.append(str.charAt(i));
-    return strB.toString();
-        };
-
 }
 
 
