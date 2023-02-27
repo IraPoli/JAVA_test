@@ -1,0 +1,5 @@
+State is a behavioral design pattern that lets an object alter(змінювати) its behavior when its internal state changes.
+ It appears as if the object changed its class.
+
+
+https://www.slideshare.net/RoiAshkenazi1/wixautomation-test-state-pattern-selenium-camp-2017
