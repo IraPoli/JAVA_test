@@ -1,11 +1,15 @@
 package org.example.java8.streams;
 
 import java.util.*;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Streams {
     public static void run(){
+        Stream<String> streamOfString =
+                Pattern.compile(", ").splitAsStream("a, b, c");
+        System.out.println(streamOfString);
         String[] arr= {"Hello", "qwerty", "asda", "asdfa", "as", "a"};
         System.out.println( "Ex1 "+ ex1(Arrays.asList(arr),'a'));
 

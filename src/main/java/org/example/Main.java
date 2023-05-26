@@ -1,8 +1,10 @@
 package org.example;
 
 import org.example.codingTasks.NumbersTask;
+import org.example.codingTasks.Solution;
 import org.example.codingTasks.StringTask;
 import org.example.exceptions.ImproperAgeValueException;
+import org.example.java8.streams.Streams;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -75,6 +77,13 @@ class Main {
 
 
        */
+        System.out.println(Solution.isPalindrome(11511));
+        System.out.println(Solution.isPalindrome(114511));
+        System.out.println(Solution.isValid("{}([])"));
+        System.out.println(Solution.isValid("fsddsfdsfsdf({}dsf[sdf])sdf"));
+        System.out.println(Solution.isValid("(((})))"));
+        System.out.println(Solution.uniqueOccurrences(new int[]{1, 2, 2,}) );
+        System.out.println(Solution.uniqueOccurrences(new int[]{1, 2,}) );
         //coding tasks\
         System.out.println(StringTask.reverseString("Test"));
         NumbersTask.swapTwoNumbers();
@@ -85,6 +94,7 @@ class Main {
         NumbersTask.printFibonacci(10);
         List<Integer> list =  Arrays.asList(2, 5, 7, 5, 3);
         System.out.println("Array contains only odd"+ NumbersTask.listContainsOnlyOdd(list));
+        System.out.println("Remove space- "+ StringTask.removeSpace("Hello everyone !"));
 
     }
 
