@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.codingTasks.ImmutableClass;
 import org.example.codingTasks.NumbersTask;
 import org.example.codingTasks.Solution;
 import org.example.codingTasks.StringTask;
@@ -77,6 +78,15 @@ class Main {
 
 
        */
+
+    //try to modify immutable obj,
+        ImmutableClass immutableObj  = new ImmutableClass("Stabile",10,new LinkedList<String>(Arrays.asList("one", "two")));
+        System.out.println(immutableObj);
+        immutableObj.getSkills().add("add one more");
+        System.out.println(immutableObj);
+        //
+
+
         System.out.println(Solution.isPalindrome(11511));
         System.out.println(Solution.isPalindrome(114511));
         System.out.println(Solution.isValid("{}([])"));
@@ -94,7 +104,7 @@ class Main {
         NumbersTask.printFibonacci(10);
         List<Integer> list =  Arrays.asList(2, 5, 7, 5, 3);
         System.out.println("Array contains only odd"+ NumbersTask.listContainsOnlyOdd(list));
-        System.out.println("Remove space- "+ StringTask.removeSpace("Hello everyone !"));
+    //    System.out.println("Remove space- "+ StringTask.removeSpace("Hello everyone !"));
 
     }
 
