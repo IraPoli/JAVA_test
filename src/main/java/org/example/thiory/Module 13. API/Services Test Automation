@@ -1,0 +1,30 @@
+Module 13. API/Services TestAutomation
+1.Client-server paradigm, caching, restful, stateless
+2.HTTP methods
+3.Status codes [200, 201, 204, 401, 403, 404, 409, 503, 504], groups of status codes
+4.Idempotency? What HTTP methods are idempotent?
+5.Pass parameter in request
+6.HTTP headers, request body. Know popular http headers
+7.URI vs URL vs URN
+8.Tools for API automation
+9.Richardson maturity model
+10.SOAP UI
+11.REST
+11.1.Importance of API testing
+11.2.API testing approach
+12.Curl
+13.Jq
+14.Postman
+15.Fiddler
+15.1.How to use the toll
+15.2.Capture requests from browser
+16.Swagger
+
+
+
+https://restfulapi.net/rest-architectural-constraints/
+
+
+https://developer.mozilla.org/ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
+
+https://www.altexsoft.com/blog/api-testing/
