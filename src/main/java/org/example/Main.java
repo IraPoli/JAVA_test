@@ -1,11 +1,9 @@
 package org.example;
 
-import org.example.codingTasks.ImmutableClass;
-import org.example.codingTasks.NumbersTask;
-import org.example.codingTasks.Solution;
-import org.example.codingTasks.StringTask;
+import org.example.codingTasks.*;
 import org.example.exceptions.ImproperAgeValueException;
 import org.example.java8.streams.Streams;
+import org.example.jdbc.JDBC_Example;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -41,7 +39,7 @@ class Main {
     static short val8;
 
     static byte val9;
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ImproperAgeValueException {
      //   RunException.run();
      //   RunAnnotation.start();
 
@@ -79,12 +77,17 @@ class Main {
 
        */
 
+
+        JDBC_Example.run();
+        useComparatorAndComparable.runComp();
     //try to modify immutable obj,
         ImmutableClass immutableObj  = new ImmutableClass("Stabile",10,new LinkedList<String>(Arrays.asList("one", "two")));
         System.out.println(immutableObj);
         immutableObj.getSkills().add("add one more");
         System.out.println(immutableObj);
         //
+
+        //try Mup
 
 
         System.out.println(Solution.isPalindrome(11511));
