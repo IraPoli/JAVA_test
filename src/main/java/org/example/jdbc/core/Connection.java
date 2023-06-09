@@ -1,5 +1,7 @@
 package org.example.jdbc.core;
 
+import org.example.jdbc.utils.PropertiesReader;
+
 import java.sql.DriverManager;
 import java.sql.Statement;
 
@@ -12,7 +14,10 @@ public class Connection {
         if (statementThreadLocal.get() == null) {
             try {
                 Class.forName("org.postgresql.Driver");
-                java.sql.Connection connection = DriverManager.getConnection(url, username, password);
+                PropertiesReader propertiesReader = new PropertiesReader();
+                java.sql.Connection connection = DriverManager.getConnection(   propertiesReader.getDBURL(),
+                                                                                propertiesReader.getDBName(),
+                                                                                propertiesReader.getDBPassword());
                 Statement statement = connection.createStatement();
                 statementThreadLocal.set(statement);
             } catch (Exception e) {
