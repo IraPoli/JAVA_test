@@ -39,20 +39,11 @@ public class CourseDAO {
 
     public String getCourseNameById(int id) {
         String query = "select name from `jdbc-v`.`courses` where idcource = " + id;
-       /* try {
-            statement = Connection.getInstance();
-            ResultSet resultSet = statement.executeQuery(query);
-            resultSet.next();
-            return resultSet.getString(1);
-        } catch (Exception exception){
-            System.out.println(exception);
-        }
-        return null;*/
         return CommonDAO.getString(query);
     }
 
     public static int getNextId(){
         String query = "SELECT COUNT(*) as count_connections from `jdbc-v`.`courses`;";
-        return CommonDAO.getInt(query) ;
+        return CommonDAO.getNext(query) ;
     }
 }

@@ -26,7 +26,7 @@ public class JDBC_Example {
         //connectionDAO.addConnection(4,1,10);
 
 
-        connectionDAO.addConnection(1,1,1);
+        connectionDAO.addConnection(2,1,1);
         connectionDAO.addConnection(1,1,1);
         System.out.println("stop");
     }

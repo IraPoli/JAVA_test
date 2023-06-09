@@ -50,6 +50,6 @@ public class PersonDAO  extends CommonDAO{
 
     public static int getNextId(){
         String query = "SELECT COUNT(*) as count_connections from `jdbc-v`.`people`;";
-        return CommonDAO.getInt(query);
+        return CommonDAO.getNext(query);
     }
 }

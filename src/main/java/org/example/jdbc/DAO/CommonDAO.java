@@ -23,13 +23,16 @@ public class CommonDAO {
             statement = Connection.getInstance();
             ResultSet resultSet = statement.executeQuery(query);
             resultSet.next();
-            return resultSet.getInt(1)+1;
+            return resultSet.getInt(1);
         } catch (Exception exception){
             System.out.println(exception);
         }
         return 0;
     }
 
+    public static int getNext(String query){
+      return   getInt(query)+1;
+    }
 
     public static void execute(String query){
         try {
