@@ -4,17 +4,13 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.UncheckedIOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-
-import java.util.Objects;
+import java.util.*;
 
 
 import org.example.annotaions.IString;
 import org.example.annotaions.RunNow;
 import org.example.exceptions.ImproperAgeValueException;
-public class Person {
+public class Person implements Comparable{
 
     int age;
     @IString
@@ -94,4 +90,34 @@ public class Person {
     }
 
 
+    @Override
+    public int compareTo(Object o) {
+
+
+        if (this.age >  ((Person) o).age) {
+
+            return 1;
+        }
+        else if (this.age < ((Person) o).age) {
+
+            return -1;
+        }
+        else {
+
+
+            return 0;
+        }
+
+    }
+
+
+    public static Comparator<Person> comparatorByName= new Comparator<Person>() {
+        @Override
+        public int compare(Person o1, Person o2) {
+          if(o1.name.charAt(0)<o2.name.charAt(0))return -1;
+          if(o1.name.charAt(0)==o2.name.charAt(0))return 0;
+         return 1;
+        }
+
+    };
 }
